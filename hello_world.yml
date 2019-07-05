@@ -2,8 +2,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
+       debug:
        msg: "Hello Azais!"
     - name: Check for current Microsoft dotnet Framework version
       win_reg_stat:
