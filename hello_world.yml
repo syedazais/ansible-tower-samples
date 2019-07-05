@@ -12,10 +12,10 @@
       name: Version
       register: dotnet_version
       
-      - debug:
+      debug:
       var: dotnet_version
       verbosity: 1
       
-        debug:
-        msg: dotnet_version.value
+      debug:
+      msg: dotnet_version.value
 
