@@ -1,3 +1,4 @@
+---
 - name: Hello World Sample
   hosts: all
   tasks:
@@ -7,9 +8,14 @@
         
     - name: Check for current Microsoft dotnet Framework version
       win_reg_stat:
-      path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
+      path: HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
       name: Version
       register: dotnet_version
-      debug:
+      
+      - debug:
+      var: dotnet_version
+      verbosity: 1
+      
+        debug:
         msg: dotnet_version.value
 
