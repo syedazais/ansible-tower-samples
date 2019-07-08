@@ -2,8 +2,9 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-       debug:
-       msg: "Hello Azais!"
+      debug:
+      msg: "Hello Azais!"
+      - name: Check for current Microsoft .NET Framework 4 version
       win_reg_stat:
       path: HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full
       name: Version
