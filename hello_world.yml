@@ -1,5 +1,9 @@
+---
 - name: Hello World Sample
-  hosts: all
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
   tasks:
     - name: Ping status
       ping: 
