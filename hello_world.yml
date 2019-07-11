@@ -1,6 +1,7 @@
 ---
 - name: Hello World Sample
   hosts: all
+  ansible -m ping
   tasks:
       debug:
       msg: "Hello Azais!"
