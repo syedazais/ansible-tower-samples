@@ -1,6 +1,6 @@
 ---
 - name: Hello World Sample
-- hosts: 155.138.163.184
+- hosts: all
   become: yes
   become_user: root
   become_method: sudo
